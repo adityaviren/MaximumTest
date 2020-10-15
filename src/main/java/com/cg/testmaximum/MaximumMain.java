@@ -1,7 +1,15 @@
 package com.cg.testmaximum;
 
-public class MaximumMain {
-    public<T extends Comparable> T maximum(T a, T b, T c){
+public class MaximumMain<T extends Comparable> {
+    T a,b,c;
+
+    MaximumMain(T a,T b,T c){
+        this.a=a;
+        this.b=b;
+        this.c=c;
+    }
+
+    public T maximum(){
         if(a.compareTo(b)>0&&a.compareTo(c)>0){
             return a;
         }

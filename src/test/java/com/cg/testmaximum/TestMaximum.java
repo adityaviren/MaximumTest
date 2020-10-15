@@ -7,7 +7,7 @@ public class TestMaximum {
 
     @Test
     public void maximumTest(){
-        MaximumMain maximumMain=new MaximumMain();
-        Assert.assertEquals((Integer)12,maximumMain.maximum(12,4,1));
+        MaximumMain maximumMain=new MaximumMain(12,4,1);
+        Assert.assertEquals(12,maximumMain.maximum());
     }
 }
