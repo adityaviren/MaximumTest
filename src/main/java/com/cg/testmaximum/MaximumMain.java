@@ -1,23 +1,24 @@
 package com.cg.testmaximum;
 
-public class MaximumMain<T extends Comparable> {
-    T a,b,c;
+import java.util.*;
 
-    MaximumMain(T a,T b,T c){
-        this.a=a;
-        this.b=b;
-        this.c=c;
+public class MaximumMain<T extends Comparable> {
+    T[] inputArray;
+
+    MaximumMain(T[] inputArray){
+        this.inputArray=inputArray;
     }
 
     public T maximum(){
-        if(a.compareTo(b)>0&&a.compareTo(c)>0){
-            return a;
-        }
-        else if(b.compareTo(a)>0&&b.compareTo(c)>0){
-            return b;
-        }
-        else {
-            return c;
-        }
+        List<T> array_list=new ArrayList<>();
+        array_list=Arrays.asList(inputArray);
+        Collections.sort(array_list);
+        return array_list.get(array_list.size()-1);
     }
+    /*public void printMax(){
+        List<T> array_list=new ArrayList<>();
+        array_list=Arrays.asList(inputArray);
+        Collections.sort(array_list);
+        System.out.println(array_list.get(array_list.size()-1));
+    }*/
 }
