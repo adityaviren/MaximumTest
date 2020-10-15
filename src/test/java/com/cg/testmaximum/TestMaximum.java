@@ -8,6 +8,6 @@ public class TestMaximum {
     @Test
     public void maximumTest(){
         MaximumMain maximumMain=new MaximumMain();
-        Assert.assertEquals("zz",maximumMain.maximumString("zz","aa","AA"));
+        Assert.assertEquals((Integer)12,maximumMain.maximum(12,4,1));
     }
 }
